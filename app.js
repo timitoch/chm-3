@@ -43,7 +43,7 @@ function solve() {
         a[i] = [];
 
         for (let j = 0; j < size + 1; j++) {
-            a[i][j] = parseFloat(matrix[i][j].value);
+            a[i][j] = matrix[i][j].value ? parseFloat(matrix[i][j].value) : 1;
 
             if (isNaN(a[i][j])) {
                 alert("Будь ласка, введіть числове значення для всіх коефіцієнтів та вільних членів.");
