@@ -93,7 +93,8 @@ function solve() {
     document.getElementById('result').innerHTML = '';
 
     for (let i = 0; i < size; i++) {
-        document.getElementById('result').innerHTML += `x<sub>${i + 1}</sub> = ${x[i].toFixed(6)}<br>`;
+        let formattedNumber = Number.isInteger(x[i]) ? x[i] : x[i].toFixed(6);
+        document.getElementById('result').innerHTML += `x<sub>${i + 1}</sub> = ${formattedNumber}<br>`;
     }
 }
 
